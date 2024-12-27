@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home-section__home, .home-section__projects, .home-section__services, .home-section__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100lvh;
+}
+.home-section__home {
+  background-color: #BCA1C7;
+}
+.home-section__projects {
+  background-color: #D2CDC0;
+}
+.home-section__services {
+  background-color: #A1B7C7;
+}
+.home-section__contact {
+  background-color: #A8C7A1;
+}
+
+.c-header {
+  position: fixed;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: 55px;
+}
+.c-header__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+  background-color: #D9D9D9;
+}
+.c-header__wrapper:has(.c-header__item:not(.is-active):hover) .c-header__item.is-active {
+  background-color: transparent;
+}
+.c-header__wrapper:has(.c-header__item:not(.is-active):hover) .c-header__item.is-active a {
+  color: black;
+}
+.c-header__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 35px;
+  transform: translateY(0px);
+  transition: all 0.5s ease-in-out;
+}
+.c-header__item a {
+  padding-inline: 20px;
+  padding-block: 8px;
+  font-family: "Lexend", sans-serif;
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+.c-header__item:not(.is-active):hover {
+  background-color: black;
+  transform: translateY(-2px);
+}
+.c-header__item:not(.is-active):hover a {
+  color: white;
+}
+.c-header__item.is-active {
+  background-color: black;
+}
+.c-header__item.is-active a {
+  color: white;
+}
+.c-header__item.is-active:hover {
+  transform: translateY(-2px);
+}
+
+.c-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.c-text__wrapper-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-text__icon {
+  width: 100px;
+  height: 100px;
+}
+.c-text__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  pointer-events: all;
+  cursor: pointer;
+}
+.c-text__link:hover {
+  transform: translateY(-2px) scale(1.075);
+}
+.c-text__title {
+  margin-bottom: 0px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+}
+.c-text__subtitle {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.c-projects {
+  background-color: #A8C7A1;
+}
+
+.c-services {
+  background-color: #D9D9D9;
+}
+
+.c-projects, .c-services {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  scale: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.c-projects.is-open, .c-services.is-open {
+  scale: 1;
+  opacity: 1;
+}
+.c-projects__wrapper, .c-services__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.c-projects__close, .c-services__close {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+.c-projects__close a, .c-services__close a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 50px;
+  height: 50px;
+  font-family: "Lexend", sans-serif;
+  color: black;
+  font-size: 60px;
+  transition: all 0.5s ease-in-out;
+}
+.c-projects__close a:hover, .c-services__close a:hover {
+  transform: scale(1.075) rotate(45deg);
+}/*# sourceMappingURL=style.min.css.map */
